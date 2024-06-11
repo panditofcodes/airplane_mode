@@ -6,4 +6,8 @@ from frappe.model.document import Document
 
 
 class AirplaneTicket(Document):
-	pass
+	def before_save(self):
+		self.set_total_amount()
+
+	def set_total_amount(self):
+		pass
