@@ -1,7 +1,17 @@
-{% extends "templates/web.html" %}
+{% extends "templates/web.html" %} {% block page_content %}
+<h3 class="mb-10">{{ title |e }}</h3>
+<div class="ml-6">
+	<h5>Flight Details:</h5>
+	<ul>
+		<li>Airline: {{ (doc.airplane) }}</li>
+		<li>{{ (doc.source_airport_code) }}-->{{ (doc.destination_airport_code) }}</li>
+		<li>{{ (doc.date_of_departure) }} | {{ (doc.time__of_departure) }}</li>
+		<li>{{ (doc.duration) }}</li>
+	</ul>
+    <a href="/book-flight/new">test</a>
+	<button class="btn btn-primary" >Book Now</button>
+</div>
 
-{% block page_content %}
-<h1>{{ titl |e }}</h1>
 {% endblock %}
 
 <!-- this is a sample default web page template -->
