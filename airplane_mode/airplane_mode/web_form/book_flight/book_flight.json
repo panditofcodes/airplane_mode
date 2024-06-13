@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2024-06-12 19:07:39.275783",
+ "modified": "2024-06-13 10:30:34.452128",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "book-flight",
@@ -30,20 +30,6 @@
  "show_sidebar": 0,
  "title": "Book Flight",
  "web_form_fields": [
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "hidden": 0,
-   "label": "Amended From",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Airplane Ticket",
-   "precision": "",
-   "read_only": 1,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "passenger",
@@ -126,19 +112,6 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "seat_no",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Seat No.",
-   "max_length": 0,
-   "max_value": 0,
-   "precision": "",
-   "read_only": 1,
-   "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
    "fieldname": "section_break_s7ft",
    "fieldtype": "Section Break",
    "hidden": 0,
@@ -165,20 +138,6 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "source_airport_code",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Source Airport Code",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "",
-   "precision": "",
-   "read_only": 1,
-   "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
    "fieldname": "column_break_wmck",
    "fieldtype": "Column Break",
    "hidden": 0,
@@ -200,20 +159,6 @@
    "options": "Airport",
    "precision": "",
    "read_only": 0,
-   "reqd": 1,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "destination_airport_code",
-   "fieldtype": "Data",
-   "hidden": 0,
-   "label": "Destination Airport Code",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Airport",
-   "precision": "",
-   "read_only": 1,
    "reqd": 1,
    "show_in_filter": 0
   },

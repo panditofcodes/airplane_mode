@@ -1,26 +1,45 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{flight}-{source_airport_code}-to-{destination_airport_code}-{####}",
  "creation": "2024-06-10 15:10:10.505953",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_sbnh",
   "amended_from",
   "passenger",
+  "add_ons_column",
+  "flight",
+  "section_break_sbnh",
+  "status",
+  "column_break_wgwh",
+  "seat_no",
+  "section_break_s7ft",
+  "column_break_zkma",
   "src_airport",
   "source_airport_code",
+  "column_break_wmck",
   "dst_airport",
   "destination_airport_code",
-  "flight",
+  "section_break_t3ox",
+  "column_break_ykwk",
   "departure_date",
+  "column_break_lda4",
   "departure_time",
+  "column_break_1srh",
   "duration",
-  "status",
+  "section_break_yvee",
+  "column_break_sctx",
+  "fare",
+  "column_break_ning",
+  "capicity",
+  "section_break_bvcy",
   "add_ons",
-  "flight_price",
-  "total_amount"
+  "section_break_ewom",
+  "final_amount",
+  "route",
+  "is_published"
  ],
  "fields": [
   {
@@ -46,44 +65,54 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.source_airport",
    "fieldname": "src_airport",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Source Airport",
    "options": "Airport",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "flight.destination_airport",
    "fieldname": "dst_airport",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Destination Airtport",
    "options": "Airport",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "flight",
    "fieldtype": "Link",
    "label": "Flight",
-   "options": "Airplane",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
+   "fetch_from": "flight.date_of_departure",
    "fieldname": "departure_date",
    "fieldtype": "Date",
    "label": "Departure Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "flight.time__of_departure",
    "fieldname": "departure_time",
    "fieldtype": "Time",
    "label": "Departure Time",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "flight.duration",
    "fieldname": "duration",
    "fieldtype": "Duration",
    "label": "Duration",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -96,7 +125,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "src_airport.code",
+   "fetch_from": "flight.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "label": "Source Airport Code",
@@ -104,7 +133,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "dst_airport.code",
+   "fetch_from": "flight.destination_airport_code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Read Only",
    "label": "Destination Airport Code",
@@ -113,32 +142,122 @@
    "reqd": 1
   },
   {
-   "default": "0",
-   "fieldname": "flight_price",
-   "fieldtype": "Currency",
-   "label": "Flight Price",
+   "fieldname": "add_ons_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wgwh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seat_no",
+   "fieldtype": "Data",
+   "label": "Seat No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_s7ft",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zkma",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wmck",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_t3ox",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ykwk",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lda4",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1srh",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ewom",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sctx",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "flight.price",
+   "fieldname": "fare",
+   "fieldtype": "Float",
+   "label": "Fare",
+   "non_negative": 1,
+   "read_only": 1,
    "reqd": 1
   },
   {
    "default": "0",
-   "fieldname": "total_amount",
-   "fieldtype": "Currency",
-   "label": "Total Amount",
+   "fieldname": "final_amount",
+   "fieldtype": "Float",
+   "label": "Final Amount (Fare + Total add on item price)",
    "non_negative": 1,
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "is_published"
   },
   {
    "fieldname": "add_ons",
    "fieldtype": "Table",
    "label": "Add Ons",
    "options": "Airplane Ticket Add-on Item"
+  },
+  {
+   "fieldname": "section_break_bvcy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_yvee",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ning",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.capicity",
+   "fieldname": "capicity",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Capicity"
   }
  ],
+ "has_web_view": 1,
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-11 16:30:59.201509",
+ "modified": "2024-06-13 18:11:48.679237",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
@@ -159,6 +278,7 @@
    "write": 1
   }
  ],
+ "route": "flight-tickets",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [

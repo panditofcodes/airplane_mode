@@ -1,0 +1,27 @@
+{% extends "templates/web.html" %} {% block page_content %}
+<h4>{{ title | e }}</h4>
+<p>Journey Date: {{ (frappe.utils.format_date(departure_date, "d MMMM, YYYY")) }}</p>
+<p>Time: {{ (departure_time) }}</p>
+<p>Seat No. : {{ (doc.seat_no) }}</p>
+<p>Fare: {{ (fare) }}</p>
+<h6>Add Ons:</h6>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Item</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for items in add_ons %}
+		<tr>
+			<td>{{ items.item | e }}</td>
+			<td>{{ items.amount | e }}Rs</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<p>Total Fare including add ons: {{ (final_amount) }}</p>
+{% endblock %}
+
+<!-- this is a sample default web page template -->

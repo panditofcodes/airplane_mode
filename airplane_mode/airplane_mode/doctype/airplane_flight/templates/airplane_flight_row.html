@@ -8,11 +8,11 @@
 	</div>
 
 	<div style="gap: 5px;" class="d-flex p-2 ">
-		<p>{{ (doc.date_of_departure) }}</p>
+		<p>{{ (frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")) }}</p>
 		<p>|</p>
 		<p>{{ (doc.time__of_departure) }}</p>
 		<p>|</p>
-		<p>{{ (doc.duration) }}</p>
+		<p>{{ (frappe.utils.format_duration(doc.duration)) }}</p>
 	</div>
 	<a href="/{{ doc.route |e }}" style="color: blue;">View Flight</a>
 </div>

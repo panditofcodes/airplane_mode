@@ -5,11 +5,13 @@
 	<ul>
 		<li>Airline: {{ (doc.airplane) }}</li>
 		<li>{{ (doc.source_airport_code) }}-->{{ (doc.destination_airport_code) }}</li>
-		<li>{{ (doc.date_of_departure) }} | {{ (doc.time__of_departure) }}</li>
-		<li>{{ (doc.duration) }}</li>
+		<li>
+			{{ (frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")) }} | {{
+			(doc.time__of_departure) }}
+		</li>
+		<li>{{ (frappe.utils.format_duration(doc.duration)) }}</li>
 	</ul>
-    <a href="/book-flight/new">test</a>
-	<button class="btn btn-primary" >Book Now</button>
+	<a href="/book-flight/new"><button class="btn btn-primary">Book Now</button></a>
 </div>
 
 {% endblock %}
