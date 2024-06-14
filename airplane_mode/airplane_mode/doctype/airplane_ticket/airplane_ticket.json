@@ -70,7 +70,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Source Airport",
-   "options": "Airport",
+   "options": "Airports",
    "read_only": 1,
    "reqd": 1
   },
@@ -80,7 +80,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Destination Airtport",
-   "options": "Airport",
+   "options": "Airports",
    "read_only": 1,
    "reqd": 1
   },
@@ -88,7 +88,7 @@
    "fieldname": "flight",
    "fieldtype": "Link",
    "label": "Flight",
-   "options": "Airplane Flight",
+   "options": "Flights",
    "reqd": 1
   },
   {
@@ -137,7 +137,7 @@
    "fieldname": "destination_airport_code",
    "fieldtype": "Read Only",
    "label": "Destination Airport Code",
-   "options": "Airport",
+   "options": "Airports",
    "read_only": 1,
    "reqd": 1
   },
@@ -257,7 +257,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-13 18:11:48.679237",
+ "modified": "2024-06-14 12:57:05.131054",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
@@ -275,6 +275,50 @@
    "role": "System Manager",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1,
    "write": 1
   }
  ],

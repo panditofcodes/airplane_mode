@@ -5,5 +5,5 @@
 from frappe.website.website_generator import WebsiteGenerator
 
 
-class AirplaneFlight(WebsiteGenerator):
+class Flights(WebsiteGenerator):
 	pass

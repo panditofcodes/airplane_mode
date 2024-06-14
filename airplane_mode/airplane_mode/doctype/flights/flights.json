@@ -58,7 +58,7 @@
    "fieldname": "source_airport",
    "fieldtype": "Link",
    "label": "Source Airport",
-   "options": "Airport",
+   "options": "Airports",
    "reqd": 1
   },
   {
@@ -76,7 +76,7 @@
    "fieldname": "destination_airport",
    "fieldtype": "Link",
    "label": "Destination AIrport",
-   "options": "Airport",
+   "options": "Airports",
    "reqd": 1
   },
   {
@@ -146,7 +146,10 @@
    "fieldname": "capicity",
    "fieldtype": "Int",
    "label": "Capicity",
-   "options": "Airplane"
+   "non_negative": 1,
+   "options": "Airplane",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_lsqv",
@@ -158,10 +161,10 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-06-13 17:46:42.569487",
+ "modified": "2024-06-14 12:55:59.704018",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
- "name": "Airplane Flight",
+ "name": "Flights",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
@@ -176,6 +179,48 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
   }
  ],
  "route": "flights",

@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"X2Sp0gBwoM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"vi8RlQ1mxr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airlines\",\"col\":4}},{\"id\":\"cTHLTx5IAR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Passengers\",\"col\":4}},{\"id\":\"fWujj50Iq5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Airplanes\",\"col\":4}},{\"id\":\"ZBVHlQzIbz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Ticket\",\"col\":4}},{\"id\":\"ArVInsE_e6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"dJUpp_V6YJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}}]",
+ "content": "[{\"id\":\"X2Sp0gBwoM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"vi8RlQ1mxr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airlines\",\"col\":4}},{\"id\":\"cTHLTx5IAR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Passengers\",\"col\":4}},{\"id\":\"fWujj50Iq5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Airplanes\",\"col\":4}},{\"id\":\"ZBVHlQzIbz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Ticket\",\"col\":4}},{\"id\":\"ArVInsE_e6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"dJUpp_V6YJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"VKdhNmn-fB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue By Airline\",\"col\":4}},{\"id\":\"UaCnE8iaJp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane by Airlines\",\"col\":4}}]",
  "creation": "2024-06-10 17:11:05.416575",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Airplane Mode",
  "links": [],
- "modified": "2024-06-13 10:36:47.666151",
+ "modified": "2024-06-14 13:42:25.398322",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Mode",
@@ -29,7 +29,7 @@
    "color": "Grey",
    "doc_view": "List",
    "label": "Airlines",
-   "link_to": "Airline",
+   "link_to": "Airlines",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -44,8 +44,22 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Revenue By Airline",
+   "link_to": "Revenue By Airline",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Airplane by Airlines",
+   "link_to": "Airplane by Airlines",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Airplane Flight",
-   "link_to": "Airplane Flight",
+   "link_to": "Flights",
    "stats_filter": "[]",
    "type": "DocType"
   },

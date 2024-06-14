@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class Airline(Document):
+class Airports(Document):
 	pass

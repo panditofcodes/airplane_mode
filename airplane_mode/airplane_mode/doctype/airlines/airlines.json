@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "prompt",
  "creation": "2024-06-10 13:10:56.898124",
@@ -8,7 +9,10 @@
  "field_order": [
   "founding_year",
   "customer_care_number",
-  "headquaters"
+  "headquaters",
+  "website",
+  "is_published",
+  "route"
  ],
  "fields": [
   {
@@ -32,19 +36,38 @@
    "in_list_view": 1,
    "label": "Headquaters",
    "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is publish"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "links": [
   {
    "link_doctype": "Airplane",
    "link_fieldname": "Model"
   }
  ],
- "modified": "2024-06-10 15:56:56.375354",
+ "modified": "2024-06-14 13:47:07.187270",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
- "name": "Airline",
+ "name": "Airlines",
  "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
@@ -59,6 +82,45 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
   }
  ],
  "sort_field": "creation",
