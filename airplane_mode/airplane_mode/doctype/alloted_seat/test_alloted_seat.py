@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestAllottedSeats(FrappeTestCase):
+class TestAllotedSeat(FrappeTestCase):
 	pass

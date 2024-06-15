@@ -3,6 +3,7 @@
 
 // frappe.ui.form.on("Flights", {
 // 	refresh(frm) {
-
+       
 // 	},
+   
 // });

@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class AllottedSeats(Document):
+class AllotedSeat(Document):
 	pass
