@@ -28,8 +28,8 @@
   "price",
   "route",
   "is_published",
-  "section_break_jvct",
-  "alloted_seats"
+  "section_break_cpuh",
+  "last_alloted_seat"
  ],
  "fields": [
   {
@@ -158,15 +158,14 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_jvct",
-   "fieldtype": "Section Break",
-   "hidden": 1
+   "fieldname": "section_break_cpuh",
+   "fieldtype": "Section Break"
   },
   {
-   "fieldname": "alloted_seats",
-   "fieldtype": "Table",
-   "label": "Alloted Seats",
-   "options": "Alloted Seat"
+   "fieldname": "last_alloted_seat",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Last Alloted Seat"
   }
  ],
  "has_web_view": 1,
@@ -174,7 +173,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-06-15 14:58:26.591368",
+ "modified": "2024-06-17 16:40:01.582627",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flights",

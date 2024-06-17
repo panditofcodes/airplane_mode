@@ -15,26 +15,23 @@
    "fieldname": "passenger_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Passenger Name",
-   "reqd": 1
+   "label": "Passenger Name"
   },
   {
    "fieldname": "seat_no",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Seat No. ",
-   "reqd": 1
+   "label": "Seat No. "
   },
   {
    "fieldname": "flight_name",
    "fieldtype": "Data",
-   "label": "Flight Name",
-   "reqd": 1
+   "label": "Flight Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-15 18:20:44.615630",
+ "modified": "2024-06-17 13:31:05.913065",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Alloted Seat",

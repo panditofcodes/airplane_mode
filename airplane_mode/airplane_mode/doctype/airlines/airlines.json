@@ -10,9 +10,7 @@
   "founding_year",
   "customer_care_number",
   "headquaters",
-  "website",
-  "is_published",
-  "route"
+  "website"
  ],
  "fields": [
   {
@@ -40,31 +38,18 @@
   {
    "fieldname": "website",
    "fieldtype": "Data",
-   "label": "Website"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_published",
-   "fieldtype": "Check",
-   "label": "Is publish"
-  },
-  {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "route"
+   "label": "Website",
+   "reqd": 1
   }
  ],
- "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "is_published_field": "is_published",
  "links": [
   {
    "link_doctype": "Airplane",
    "link_fieldname": "Model"
   }
  ],
- "modified": "2024-06-14 13:47:07.187270",
+ "modified": "2024-06-17 17:55:34.197969",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airlines",

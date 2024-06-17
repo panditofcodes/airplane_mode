@@ -3,23 +3,49 @@
 
 frappe.ui.form.on("Airplane Ticket", {
 	refresh(frm) {
-		frm.add_custom_button("Allot Seat", () => allot_seat(frm));
-		frappe.show_alert("Working", 2);
+		let showBtn = true
+		if(showBtn){
+			frm.add_custom_button("Allot Seat", () => allot_seat(frm));
+			showBtn = false
+		}
 	},
 });
 
-function allot_seat(frm) {
-	f_name = frm.doc.flight;
-	let total_entries; // Declare total_entries only once
+async function allot_seat(frm) {
+	flightName = frm.doc.flight;
+	let flightCapacity;
+	await frappe.db.get_value("Flights", `${flightName}`, "capicity").then((res) => {
+		flightCapacity = res.message.capicity;
+	});
+	let totalEntries;
 
-	frappe.db
-		.count("Alloted Seat", { flight_name: f_name })
+	await frappe.db
+		.count("Alloted Seat", { filters: { flight_name: flightName } })
 		.then((count) => {
-			total_entries = count;
-			frappe.show_alert(`Total Entries: ${total_entries}`);
+			totalEntries = count;
 		})
 		.catch((err) => {
 			// Handle error
 			console.error("Error:", err);
 		});
+
+	if (totalEntries < flightCapacity) {
+		let lastAllotedSeat;
+		await frappe.db.get_value("Flights", `${flightName}`, "last_alloted_seat").then((res) => {
+			lastAllotedSeat = res.message.last_alloted_seat;
+		});
+		let temp = lastAllotedSeat + 1;
+		let seatNo = `${temp}${String.fromCharCode(
+			Math.floor(Math.random() * (122 - 97 + 1)) + 97
+		)}`;
+
+		frm.set_value("seat_no", seatNo);
+
+		frappe.db.set_value("Flights", `${flightName}`, "last_alloted_seat", temp).then((r) => {
+			let doc = r.message;
+			console.log(doc);
+		});
+	} else {
+		frappe.show_alert("No more seats available!")
+	}
 }
