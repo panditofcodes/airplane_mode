@@ -11,6 +11,7 @@
   "passenger",
   "add_ons_column",
   "flight",
+  "gate_number",
   "section_break_sbnh",
   "status",
   "column_break_wgwh",
@@ -249,15 +250,20 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "Capicity"
+  },
+  {
+   "fetch_from": "flight.gate_no",
+   "fieldname": "gate_number",
+   "fieldtype": "Int",
+   "label": "Gate Number"
   }
  ],
  "has_web_view": 1,
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-14 12:57:05.131054",
+ "modified": "2024-06-18 17:30:33.347324",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

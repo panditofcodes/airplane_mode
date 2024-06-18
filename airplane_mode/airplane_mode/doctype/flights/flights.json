@@ -28,8 +28,12 @@
   "price",
   "route",
   "is_published",
+  "section_break_ydqk",
+  "flight_crew_members",
   "section_break_cpuh",
-  "last_alloted_seat"
+  "total_alloted_seat",
+  "column_break_kqey",
+  "gate_no"
  ],
  "fields": [
   {
@@ -45,11 +49,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "Scheduled",
+   "default": "scheduled",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Scheduled\nCompleted\nCancelled"
+   "options": "scheduled\ncompleted\ncancelled"
   },
   {
    "fieldname": "airport_details_section",
@@ -162,18 +166,39 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "last_alloted_seat",
+   "fieldname": "total_alloted_seat",
    "fieldtype": "Int",
    "hidden": 1,
-   "label": "Last Alloted Seat"
+   "label": "Total Alloted Seat"
+  },
+  {
+   "fieldname": "section_break_ydqk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "flight_crew_members",
+   "fieldtype": "Table",
+   "label": "Flight Crew Members",
+   "options": "Flight Crew Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kqey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gate_no",
+   "fieldtype": "Int",
+   "label": "Gate No",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
  "has_web_view": 1,
- "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2024-06-17 16:40:01.582627",
+ "modified": "2024-06-18 17:29:16.734739",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flights",
