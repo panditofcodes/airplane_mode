@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-19 11:46:45.998115",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant_information_section",
+  "profile_photo",
+  "column_break_zfqe",
+  "tanant_name",
+  "section_break_prkg",
+  "column_break_wush",
+  "email",
+  "column_break_kvkh",
+  "phone_number",
+  "column_break_4ehz",
+  "address",
+  "section_break_6jrr",
+  "sign_lease_agreement"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sign_lease_agreement",
+   "fieldtype": "Check",
+   "label": "Sign Lease Agreement"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "column_break_zfqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tanant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tenant Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_prkg",
+   "fieldtype": "Section Break",
+   "label": "Contact Information:"
+  },
+  {
+   "fieldname": "column_break_wush",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kvkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4ehz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6jrr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tenant_information_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant Information"
+  }
+ ],
+ "image_field": "profile_photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-19 15:47:49.918655",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Tenant",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_preview_popup": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

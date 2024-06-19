@@ -1,0 +1,53 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "Item",
+   "fieldtype": "Data",
+   "label": "item",
+   "width": 0
+  },
+  {
+   "fieldname": "Popularity",
+   "fieldtype": "Int",
+   "label": "popularity",
+   "width": 0
+  }
+ ],
+ "creation": "2024-06-17 18:00:03.840228",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letterhead": null,
+ "modified": "2024-06-19 10:30:24.883041",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Add-on Popularity",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT item,COUNT(item) FROM `tabAirplane Ticket Add-on Item` GROUP BY item;",
+ "ref_doctype": "Airplane Ticket Add-on Type",
+ "report_name": "Add-on Popularity",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Airport Authority Personnel"
+  },
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "Travel Agent"
+  },
+  {
+   "role": "Flight Crew Member"
+  }
+ ]
+}

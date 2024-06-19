@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-19 11:49:13.763943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_information_section",
+  "supplier_profile_photo",
+  "column_break_vww9",
+  "supplier_name",
+  "contact_information_section",
+  "email",
+  "column_break_bl7w",
+  "phone_number",
+  "column_break_odmu",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "supplier_profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Supplier Profile Photo"
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vww9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bl7w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_odmu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "personal_information_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  }
+ ],
+ "image_field": "supplier_profile_photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-19 16:45:50.460095",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Supplier",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

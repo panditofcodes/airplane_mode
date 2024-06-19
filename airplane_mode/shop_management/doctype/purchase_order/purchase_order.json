@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{YYYY}-{MM}-{DD}-{HH}-{MM}-{SS}-{autoincrement}",
+ "creation": "2024-06-19 11:49:31.877408",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_information_section",
+  "shop",
+  "column_break_rzuv",
+  "shop_no",
+  "cart_section",
+  "cart",
+  "section_break_k0tc",
+  "date",
+  "column_break_vgr0",
+  "status",
+  "section_break_a3qz",
+  "total_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nConfirmed\nReceived\nCancelled"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Purchase Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "cart",
+   "fieldtype": "Table",
+   "label": "Cart",
+   "options": "Cart",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.shop_no",
+   "fieldname": "shop_no",
+   "fieldtype": "Int",
+   "label": "Shop No",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_information_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Information"
+  },
+  {
+   "fieldname": "column_break_rzuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_k0tc",
+   "fieldtype": "Section Break",
+   "label": "Other Information"
+  },
+  {
+   "fieldname": "column_break_vgr0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_a3qz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cart_section",
+   "fieldtype": "Section Break",
+   "label": "Cart "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-19 16:57:40.875333",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Purchase Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

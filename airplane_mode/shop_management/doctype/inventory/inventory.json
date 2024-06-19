@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-19 11:48:51.558887",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "inventory_section",
+  "shop",
+  "column_break_khgy",
+  "shop_number",
+  "section_break_y74c",
+  "shop_inventory",
+  "cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.shop_no",
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "label": "Shop Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "shop_inventory",
+   "fieldtype": "Table",
+   "label": "Shop Inventory",
+   "options": "Shop Inventry"
+  },
+  {
+   "fieldname": "inventory_section",
+   "fieldtype": "Section Break",
+   "label": "Inventory"
+  },
+  {
+   "fieldname": "column_break_khgy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_y74c",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Shop",
+   "link_fieldname": "shop_no"
+  }
+ ],
+ "modified": "2024-06-19 17:36:29.601555",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Inventory",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

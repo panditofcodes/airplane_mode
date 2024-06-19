@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{YYYY}-{MM}-{DD}-{####}",
+ "creation": "2024-06-19 11:46:12.785621",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "column_break_795q",
+  "shop",
+  "section_break_74gz",
+  "start_date",
+  "column_break_bxic",
+  "end_date",
+  "section_break_lip7",
+  "status",
+  "column_break_zodc",
+  "monthly_rent",
+  "column_break_nycx",
+  "mentenance_cost",
+  "section_break_tpya",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shop No",
+   "options": "Shop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "shop.rent",
+   "fieldname": "monthly_rent",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Rent",
+   "non_negative": 1,
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nTerminated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lease Agreement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_795q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_74gz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bxic",
+   "fieldtype": "Column Break",
+   "is_virtual": 1
+  },
+  {
+   "fieldname": "section_break_lip7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_zodc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nycx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mentenance_cost",
+   "fieldtype": "Currency",
+   "label": "Mentenance Cost"
+  },
+  {
+   "fieldname": "section_break_tpya",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Shop",
+   "link_fieldname": "shop_no"
+  }
+ ],
+ "modified": "2024-06-19 17:24:43.871104",
+ "modified_by": "Administrator",
+ "module": "Shop Management",
+ "name": "Lease Agreement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Active"
+  },
+  {
+   "color": "Red",
+   "title": "Terminated"
+  }
+ ]
+}
