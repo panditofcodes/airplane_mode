@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "personal_information_section",
+  "profile_photo",
   "employee_profile_photo",
   "name1",
   "column_break_be91",
@@ -125,13 +126,18 @@
    "fieldname": "other_details_section",
    "fieldtype": "Section Break",
    "label": "Other Details"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Image",
+   "label": "Profile Photo",
+   "options": "employee_profile_photo"
   }
  ],
  "image_field": "employee_profile_photo",
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2024-06-19 16:17:10.940404",
+ "modified": "2024-06-20 18:06:22.532343",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Employee",

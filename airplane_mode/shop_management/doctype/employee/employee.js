@@ -23,4 +23,13 @@ frappe.ui.form.on("Employee", {
 			console.error("Invalid date of birth provided:", dateOfBirth);
 		}
 	},
+	before_save(frm) {
+		email = frm.doc.email;
+		phoneNumber = frm.doc.phone_number;
+
+		if (!email && !phoneNumber) {
+			frappe.msgprint("Please fill Email or Phone Number!");
+			frappe.validated = false;
+		}
+	},
 });

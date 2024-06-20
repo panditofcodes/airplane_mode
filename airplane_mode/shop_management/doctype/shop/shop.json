@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:shop_name",
+ "autoname": "field:shop_no",
  "creation": "2024-06-19 11:45:30.366921",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -20,7 +20,10 @@
   "rent_increament",
   "section_break_f3t5",
   "status",
-  "amended_from"
+  "amended_from",
+  "section_break_ohsx",
+  "shop_inventory",
+  "total_inventory_cost"
  ],
  "fields": [
   {
@@ -32,7 +35,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Shop No.",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "location",
@@ -108,17 +112,33 @@
    "fieldtype": "Data",
    "label": "Rent Increament",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ohsx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shop_inventory",
+   "fieldtype": "Table",
+   "label": "Shop Inventory",
+   "options": "Shop Inventry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_inventory_cost",
+   "fieldtype": "Currency",
+   "label": "Total Inventory Cost",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Tenant",
    "link_fieldname": "tanant_name"
   }
  ],
- "modified": "2024-06-19 17:23:50.390310",
+ "modified": "2024-06-20 12:35:10.899161",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop",

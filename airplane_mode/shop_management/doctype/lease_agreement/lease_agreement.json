@@ -6,9 +6,12 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "profile_photo",
+  "profilephoto",
   "tenant",
   "column_break_795q",
   "shop",
+  "shop_no",
   "section_break_74gz",
   "start_date",
   "column_break_bxic",
@@ -27,14 +30,13 @@
    "fieldname": "shop",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Shop No",
+   "label": "Shop",
    "options": "Shop",
    "reqd": 1
   },
   {
    "fieldname": "tenant",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Tenant",
    "options": "Tenant",
    "reqd": 1
@@ -112,6 +114,27 @@
   {
    "fieldname": "section_break_tpya",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "shop.shop_no",
+   "fieldname": "shop_no",
+   "fieldtype": "Int",
+   "label": "Shop No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Image",
+   "label": "Profile Photo",
+   "options": "profilephoto",
+   "width": "5px"
+  },
+  {
+   "fetch_from": "tenant.profile_photo",
+   "fieldname": "profilephoto",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "ProfilenPhoto"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -122,7 +145,7 @@
    "link_fieldname": "shop_no"
   }
  ],
- "modified": "2024-06-19 17:24:43.871104",
+ "modified": "2024-06-20 18:03:34.581893",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Lease Agreement",

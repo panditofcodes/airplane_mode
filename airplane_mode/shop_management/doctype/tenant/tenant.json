@@ -15,9 +15,7 @@
   "column_break_kvkh",
   "phone_number",
   "column_break_4ehz",
-  "address",
-  "section_break_6jrr",
-  "sign_lease_agreement"
+  "address"
  ],
  "fields": [
   {
@@ -36,12 +34,6 @@
    "fieldtype": "Data",
    "label": "Address",
    "reqd": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "sign_lease_agreement",
-   "fieldtype": "Check",
-   "label": "Sign Lease Agreement"
   },
   {
    "fieldname": "profile_photo",
@@ -77,10 +69,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_6jrr",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "tenant_information_section",
    "fieldtype": "Section Break",
    "label": "Tenant Information"
@@ -89,7 +77,7 @@
  "image_field": "profile_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 15:47:49.918655",
+ "modified": "2024-06-20 17:24:56.877988",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Tenant",
@@ -110,7 +98,9 @@
   }
  ],
  "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "tanant_name"
 }

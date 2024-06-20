@@ -10,7 +10,7 @@
   "column_break_khgy",
   "shop_number",
   "section_break_y74c",
-  "shop_inventory",
+  "shopinventory",
   "cost"
  ],
  "fields": [
@@ -35,12 +35,6 @@
    "label": "Cost"
   },
   {
-   "fieldname": "shop_inventory",
-   "fieldtype": "Table",
-   "label": "Shop Inventory",
-   "options": "Shop Inventry"
-  },
-  {
    "fieldname": "inventory_section",
    "fieldtype": "Section Break",
    "label": "Inventory"
@@ -52,6 +46,12 @@
   {
    "fieldname": "section_break_y74c",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "shopinventory",
+   "fieldtype": "Table",
+   "label": "Shop Inventory",
+   "options": "Shop Inventry"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -61,7 +61,7 @@
    "link_fieldname": "shop_no"
   }
  ],
- "modified": "2024-06-19 17:36:29.601555",
+ "modified": "2024-06-20 12:03:16.335933",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Inventory",
