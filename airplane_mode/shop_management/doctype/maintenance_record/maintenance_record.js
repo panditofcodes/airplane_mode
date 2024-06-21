@@ -2,14 +2,15 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Maintenance Record", {
-	refresh(frm) {},
-	async shop_no(frm) {
+	shop_no(frm) {
 		shopNumber = frm.doc.shop_no;
-		let mentenanceCost;
-		await frappe.db.get_value("Lease Agreement", shopNumber, "mentenance_cost").then((res) => {
-			mentenanceCost = res.message.mentenance_cost;
-		});
 
-		frm.set_value("cost", `${mentenanceCost}`);
+		frappe
+			.call("airplane_mode.api.get_mentenance_cost", {
+				shop_no: shopNumber,
+			})
+			.then((res) => {
+				frm.set_value("cost", res.message);
+			});
 	},
 });

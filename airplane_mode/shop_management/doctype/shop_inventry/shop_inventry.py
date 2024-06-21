@@ -6,4 +6,7 @@ from frappe.model.document import Document
 
 
 class ShopInventry(Document):
-	pass
+	def before_save(self):
+    		self.total_price = self.quantity * self.price
+     
+     

@@ -71,7 +71,7 @@
  "image_field": "supplier_profile_photo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 16:45:50.460095",
+ "modified": "2024-06-21 16:21:09.193639",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Supplier",
@@ -91,7 +91,9 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "supplier_name"
 }

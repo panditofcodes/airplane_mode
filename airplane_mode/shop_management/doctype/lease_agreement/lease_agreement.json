@@ -6,9 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "profile_photo",
-  "profilephoto",
   "tenant",
+  "mobile",
   "column_break_795q",
   "shop",
   "shop_no",
@@ -109,7 +108,8 @@
   {
    "fieldname": "mentenance_cost",
    "fieldtype": "Currency",
-   "label": "Mentenance Cost"
+   "label": "Mentenance Cost",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_tpya",
@@ -120,21 +120,14 @@
    "fieldname": "shop_no",
    "fieldtype": "Int",
    "label": "Shop No",
-   "read_only": 1
+   "read_only": 1,
+   "unique": 1
   },
   {
-   "fieldname": "profile_photo",
-   "fieldtype": "Image",
-   "label": "Profile Photo",
-   "options": "profilephoto",
-   "width": "5px"
-  },
-  {
-   "fetch_from": "tenant.profile_photo",
-   "fieldname": "profilephoto",
-   "fieldtype": "Attach Image",
-   "hidden": 1,
-   "label": "ProfilenPhoto"
+   "fetch_from": "tenant.phone_number",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -145,7 +138,7 @@
    "link_fieldname": "shop_no"
   }
  ],
- "modified": "2024-06-20 18:03:34.581893",
+ "modified": "2024-06-21 12:08:59.445710",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Lease Agreement",

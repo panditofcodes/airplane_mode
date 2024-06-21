@@ -21,8 +21,9 @@
   "section_break_f3t5",
   "status",
   "amended_from",
+  "section_break_dfaf",
+  "inventreis",
   "section_break_ohsx",
-  "shop_inventory",
   "total_inventory_cost"
  ],
  "fields": [
@@ -32,7 +33,7 @@
   },
   {
    "fieldname": "shop_no",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "in_list_view": 1,
    "label": "Shop No.",
    "reqd": 1,
@@ -109,7 +110,7 @@
   },
   {
    "fieldname": "rent_increament",
-   "fieldtype": "Data",
+   "fieldtype": "Percent",
    "label": "Rent Increament",
    "reqd": 1
   },
@@ -118,17 +119,22 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "shop_inventory",
-   "fieldtype": "Table",
-   "label": "Shop Inventory",
-   "options": "Shop Inventry",
+   "fieldname": "total_inventory_cost",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Inventory Cost",
    "read_only": 1
   },
   {
-   "fieldname": "total_inventory_cost",
-   "fieldtype": "Currency",
-   "label": "Total Inventory Cost",
-   "read_only": 1
+   "fieldname": "section_break_dfaf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "inventreis",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Inventreis",
+   "options": "Shop Inventry"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -138,7 +144,7 @@
    "link_fieldname": "tanant_name"
   }
  ],
- "modified": "2024-06-20 12:35:10.899161",
+ "modified": "2024-06-21 18:28:16.795268",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Shop",
@@ -158,6 +164,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [
@@ -173,5 +180,6 @@
    "color": "Yellow",
    "title": "Under Maintenance"
   }
- ]
+ ],
+ "title_field": "shop_name"
 }

@@ -6,16 +6,27 @@ frappe.ui.form.on("Purchase Order", {
 		await frappe.db.set_value("Purchase Order", "Status", frm.doc.status);
 	},
 
-	async before_submit(frm) {
-		newInvoice = frm.doc;
+	on_submit: async function (frm) {
+		frm.add_custom_button("Generate Invoice", async function generateInvoice() {
+			let newInvoice = {
+				shop: frm.doc.shop,
+				shop_no: frm.doc.shop_no,
+				cart_item: frm.doc.cart,
+				total_amount: frm.doc.total_amount,
+			};
 
-		await frappe.db
-			.insert({
-				doctype: "Sales Invoice",
-				subject: newInvoice,
-			})
-			.then((doc) => {
+			try {
+				let doc = await frappe.db.insert({
+					doctype: "Sales Invoice",
+					shop: frm.doc.shop,
+					shop: frm.doc.shop_no,
+					cart_item: frm.doc.cart,
+					total_amount: frm.doc.total_amount,
+				});
 				console.log(doc);
-			});
+			} catch (error) {
+				console.error(error);
+			}
+		});
 	},
 });

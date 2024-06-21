@@ -43,6 +43,7 @@
    "fieldname": "cost",
    "fieldtype": "Currency",
    "label": "Cost",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -97,7 +98,7 @@
    "link_fieldname": "shop_no"
   }
  ],
- "modified": "2024-06-20 11:09:54.569623",
+ "modified": "2024-06-21 16:03:16.174563",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Maintenance Record",

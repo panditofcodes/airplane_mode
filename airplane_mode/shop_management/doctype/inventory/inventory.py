@@ -6,4 +6,10 @@ from frappe.model.document import Document
 
 
 class Inventory(Document):
-	pass
+	def before_save(self):
+		total_inventry_cost = 0
+		 
+		for item in self.inventry_list:
+			total_inventry_cost = total_inventry_cost + (item.quantity * item.price)
+
+		self.inventry_cost = total_inventry_cost

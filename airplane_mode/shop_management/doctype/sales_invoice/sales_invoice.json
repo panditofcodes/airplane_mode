@@ -13,8 +13,7 @@
   "cart_item",
   "section_break_xce0",
   "total_amount",
-  "column_break_b6fb",
-  "date"
+  "column_break_b6fb"
  ],
  "fields": [
   {
@@ -23,13 +22,6 @@
    "in_list_view": 1,
    "label": "Shop",
    "options": "Shop",
-   "reqd": 1
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date",
    "reqd": 1
   },
   {
@@ -70,7 +62,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 15:57:44.166312",
+ "modified": "2024-06-21 11:09:18.395333",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Sales Invoice",
