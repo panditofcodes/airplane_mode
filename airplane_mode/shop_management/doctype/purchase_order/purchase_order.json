@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{YYYY}-{MM}-{DD}-{HH}-{MM}-{SS}-{autoincrement}",
+ "autoname": "format:{YYYY}-{MM}-{DD}-{HH}-{MM}-{SS}-{####}",
  "creation": "2024-06-19 11:49:31.877408",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -41,15 +41,14 @@
    "fieldtype": "Currency",
    "label": "Total Amount",
    "non_negative": 1,
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Draft\nConfirmed\nReceived\nCancelled"
+   "options": "Save\nReceived\nConfirmed\nCancelled"
   },
   {
    "fieldname": "amended_from",
@@ -107,7 +106,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-19 16:57:40.875333",
+ "modified": "2024-06-24 12:06:01.121254",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Purchase Order",

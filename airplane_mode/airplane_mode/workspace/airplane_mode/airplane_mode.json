@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"X2Sp0gBwoM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Mode</span>\",\"col\":12}},{\"id\":\"vi8RlQ1mxr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airlines\",\"col\":4}},{\"id\":\"cTHLTx5IAR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Passengers\",\"col\":4}},{\"id\":\"fWujj50Iq5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Airplanes\",\"col\":4}},{\"id\":\"ZBVHlQzIbz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Ticket\",\"col\":4}},{\"id\":\"ArVInsE_e6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"dJUpp_V6YJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"VKdhNmn-fB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue By Airline\",\"col\":4}},{\"id\":\"UaCnE8iaJp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane by Airlines\",\"col\":4}}]",
+ "content": "[{\"id\":\"X2Sp0gBwoM\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Airplane Management</span>\",\"col\":12}},{\"id\":\"vi8RlQ1mxr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airlines\",\"col\":4}},{\"id\":\"cTHLTx5IAR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Passengers\",\"col\":4}},{\"id\":\"fWujj50Iq5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Airplanes\",\"col\":4}},{\"id\":\"ZBVHlQzIbz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Ticket\",\"col\":4}},{\"id\":\"ArVInsE_e6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"dJUpp_V6YJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane Flight\",\"col\":4}},{\"id\":\"jHklp9s66Y\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"VKdhNmn-fB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Revenue By Airline\",\"col\":4}},{\"id\":\"UaCnE8iaJp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Airplane by Airlines\",\"col\":4}},{\"id\":\"Zo2lwBEGgB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Popular Add-Ons\",\"col\":4}},{\"id\":\"y7CjXIQhoL\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"P_Y0ALzPaQ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shop Management <br></b></span>\",\"col\":12}},{\"id\":\"87zI_snkFG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Shop\",\"col\":3}},{\"id\":\"VFngw6r3zm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Employee\",\"col\":3}},{\"id\":\"Y2jq55opr9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Supplier\",\"col\":3}},{\"id\":\"A5sbjqThM5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Tenant\",\"col\":3}},{\"id\":\"EiEAFRzFbX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Inventory\",\"col\":3}},{\"id\":\"ByXD-h3_pM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Manintenance\",\"col\":3}},{\"id\":\"zUIItsIjjL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Agreement\",\"col\":3}},{\"id\":\"nmDXd3EUrC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Generate Invoice\",\"col\":3}},{\"id\":\"czyvRJ1m99\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Order\",\"col\":3}},{\"id\":\"LrIqtZgrNL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Shops\",\"col\":3}},{\"id\":\"7VDS9eYtH1\",\"type\":\"paragraph\",\"data\":{\"text\":\"Reports\",\"col\":12}},{\"id\":\"Adf2-KBEMx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Inventries\",\"col\":3}},{\"id\":\"ViLyrGQbX8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales\",\"col\":3}}]",
  "creation": "2024-06-10 17:11:05.416575",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Airplane Mode",
  "links": [],
- "modified": "2024-06-14 13:42:25.398322",
+ "modified": "2024-06-24 16:50:57.857649",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Mode",
@@ -66,8 +66,77 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Popular Add-Ons",
+   "link_to": "Add-on Popularity",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Shop",
+   "link_to": "Shop",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Employee",
+   "link_to": "Employee",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Add Inventory",
+   "link_to": "Inventory",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Inventries",
+   "link_to": "Shop inventories",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Sales",
+   "link_to": "Shop Sales",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Shops",
+   "link_to": "Shop",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "All Passengers",
    "link_to": "Flight Passenger",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Tenant",
+   "link_to": "Tenant",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Manintenance",
+   "link_to": "Maintenance Record",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -76,6 +145,38 @@
    "doc_view": "List",
    "label": "All Airplanes",
    "link_to": "Airplane",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Add Supplier",
+   "link_to": "Supplier",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Create Agreement",
+   "link_to": "Lease Agreement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Generate Invoice",
+   "link_to": "Purchase Order",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Create Order",
+   "link_to": "Purchase Order",
    "stats_filter": "[]",
    "type": "DocType"
   }

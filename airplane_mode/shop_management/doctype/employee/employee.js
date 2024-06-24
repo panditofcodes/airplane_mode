@@ -32,4 +32,10 @@ frappe.ui.form.on("Employee", {
 			frappe.validated = false;
 		}
 	},
+	setup: function (frm) {
+		frm.fields_dict["image_field"].wrapper.find("img").css({
+			width: "200px",
+			height: "200px",
+		});
+	},
 });

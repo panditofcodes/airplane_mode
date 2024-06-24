@@ -26,7 +26,7 @@
   {
    "fetch_from": "shop.shop_no",
    "fieldname": "shop_number",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Shop Number",
    "read_only": 1,
    "unique": 1
@@ -67,7 +67,7 @@
    "link_fieldname": "shop_no"
   }
  ],
- "modified": "2024-06-21 17:41:51.691470",
+ "modified": "2024-06-24 12:24:59.149213",
  "modified_by": "Administrator",
  "module": "Shop Management",
  "name": "Inventory",
